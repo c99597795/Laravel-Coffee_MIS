@@ -1,0 +1,244 @@
+/* sticky footer */
+* {
+    margin: 0;
+    padding:0;
+  }
+  
+  html, body {
+    height: 100%;
+    background-size: cover;
+    font-family:"Microsoft JhengHei";
+  }
+  #body_index{
+    background-image:url('../images/coffee_background5.jpg');
+  }
+  #body_vendor{
+    background-image:url('../images/coffee--vandor-background.jpg');
+  }
+  #body_QRcodeScanner{
+    background-image:url('../images/coffee_background4-4K.png');
+  }
+  .topnav {
+    position: relative;
+    overflow: hidden;
+    background-color: #c27314;
+    font-size:25px;
+    padding:16px;
+    border-style: solid;
+    border: rgb(95, 19, 19);
+    border-width: 10px;
+  }
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.5rem 16px;
+    text-decoration: none;
+    font-size: 2.1rem;
+  }
+  .topnav a:hover{
+    animation-name: shadow;
+    animation-duration: 0.5s;
+    text-shadow: 2px 2px 5px#111;
+  }
+  .centernav a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .rightnav {
+    float: right;
+  }
+  .wrapper {
+    min-height: 100%;
+    height: auto;
+    height: 100%;
+    margin: 0 auto -5em;
+  }
+  .push {
+    height: 5em;
+    color: rgba(255,255,255,0.8);
+  }
+  /* center footer */
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.row:after{
+    content: "";
+    clear: both;
+    display: grid;
+}
+.container{
+    width:90%;
+    margin:auto;
+}
+.footer{
+    height: 5em;
+    color: rgba(255,255,255,0.8);
+    background-color: #c27314;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer a{
+    color:white;
+    text-align: center;
+    text-decoration: none;
+}
+.footer-copyright{
+    margin:20px;
+}
+#result-container{
+    background-color: white;
+    width:100%;
+}
+  #vendor_menu{
+    float:right;
+    margin-right: 16px;
+  }
+  #footer{
+    font-size:20px;
+  }
+  #footer a:hover:not(.active){
+    text-shadow: 2px 2px 5px#111;}
+  .flex-item {
+    text-align: center;
+  }
+  #contain{
+    margin-top:5%;
+  }
+  /* images */
+  #card-item-container {
+    visibility: hidden;
+  }
+  
+  #image-container {
+    position: relative;
+    padding: 10px;
+  }
+  
+  #show-img {
+    max-width: 100%;
+  }
+  
+  .face-frame {
+    border: 2px solid #ff0000;
+    position: absolute;
+  }
+  
+  .canvas-face {
+    display: none;
+  }
+  .chart-result-profile canvas {
+    border-radius: 50px;
+  }
+  #webcam {
+    width: 100%;
+  }
+  #canvas_webcam {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  #webcam_frame {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #ff0000;
+  }
+  #btn-share {
+    display: none;
+  }
+  #btn-manual {
+    display: none;
+  }
+  .cropper-modal {
+    opacity: 0.05;
+  }
+  #main-container {
+    font-family: Roboto, sans-serif;
+  }
+  #show_Price{
+    color:#ffffff;
+    font-size:46px;
+  }
+  #price{
+    color:#ffffff;
+    text-decoration:underline;
+  }
+  #show_point{
+    color:#ffffff;
+    font-size:46px;
+    text-shadow: 2px 2px 10px#111;
+    text-align: center;
+  }@keyframes shadow{
+    from{text-shadow: 0px 0px 0px;}
+    to {text-shadow: 2px 2px 5px#111;}
+  }
+  #point_div{
+    margin-top: 300px;
+  }
+  #success{
+    color:#f00000;
+    font-size:46px;
+    text-shadow: 2px 2px 10px#111;
+  }
+  #QRcode_prompt{
+    font-size:23px;
+    text-align: center;
+    color:#ffffff;
+    text-shadow: 2px 2px 10px#111;
+  }
+  /*RWD*/
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+  @media only screen and (max-width: 640px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    .topnav a, .rightnav {
+      float: none;
+      display: block;
+    }
+    
+    .centernav a {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  }
+  
