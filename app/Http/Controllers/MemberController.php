@@ -15,6 +15,9 @@ class MemberController extends Controller
     public function index()
     {
         //
+        /** 使用paginate('int')限制導入資料的數量 */
+        $members = member::paginate(10);
+        return view('MIS.member',compact('members'));
     }
 
     /**

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,23 +16,25 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('MIS.index');
-});
+})->middleware('auth');
 Route::get('MIS',function(){
     return view('MIS.index');
 });
 Route::get('admin', function () {
     return view('MIS.admin');
 })->name('admin');
-Route::get('member', function () {
+/*Route::get('member', function () {
     return view('MIS.member');
-})->name('member');
-Route::get('point', function () {
-    return view('MIS.point');
-})->name('point');
-Route::get('revenue', function () {
-    return view('MIS.revenue');
-})->name('revenue');
-
+})->name('member');*/
+/* 將MemberController中的index導向MIS.member中*/
+Route::get('member',[App\Http\Controllers\MemberController::class,'index'])->name('member');
+Route::get('point',[App\Http\Controllers\PointController::class,'index'])->name('point');
+Route::get('revenue',[App\Http\Controllers\RevenuesController::class,'index'])->name('revenue');
+Route::get('/coffee',function(){
+    return view('coffee.index');
+}
+);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

@@ -20,13 +20,16 @@
                         <th>code</th>
                         <th>次數</th>
                     </tr>
+                    @foreach($points as $point)
                     <tr><!-- First_Line -->
-                        <td>1</td>
-                        <td>Man</td>
-                        <td>11</td>
+                        <td>{{ $point->id }}</td>
+                        <td>{{ $point->code }}</td>
+                        <td>{{ $point->times }}</td>
                     </tr>
+                    @endforeach
                 </table>
         </div>
+        {{$points->links("pagination::bootstrap-4")}}
         
       </div>
     </main>

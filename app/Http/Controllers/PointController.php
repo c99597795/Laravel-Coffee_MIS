@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\point;
+use App\Models\points;
 use Illuminate\Http\Request;
 
 class PointController extends Controller
@@ -15,6 +15,8 @@ class PointController extends Controller
     public function index()
     {
         //
+        $points = points::paginate(10);
+        return view('MIS.point',compact('points'));
     }
 
     /**

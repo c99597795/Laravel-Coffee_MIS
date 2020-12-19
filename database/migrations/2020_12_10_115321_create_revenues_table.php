@@ -15,6 +15,8 @@ class CreateRevenuesTable extends Migration
     {
         Schema::create('revenues', function (Blueprint $table) {
             $table->id();
+            $table->date('date');
+            $table->integer('revenue');
             $table->timestamps();
         });
     }

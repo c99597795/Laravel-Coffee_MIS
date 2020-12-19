@@ -10,12 +10,11 @@
   <meta property="og:image" content="https://tupleblog.github.io/face-classification-js/images/face_classification_og.png">
   <title>@yield('title')</title>
   <!-- CSS -->
-  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/Vendor.css') }}" rel="stylesheet">
+  
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <!--<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/Vendor.css') }}" rel="stylesheet">-->
   <!--ReactJS-->
-  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body id='body_vendor'>
   <div class="wrapper" id=wrapper>
@@ -27,7 +26,6 @@
  <script src="{{ asset('jquery/jquery-2.1.1.min.js') }}"></script>
     <script src="{{ asset('jquery/materialize.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('jquery/adapter.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('jquery/vue.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('iconJS/all.min.js') }}"></script>
     <!-- tf -->
     <!-- utils -->
