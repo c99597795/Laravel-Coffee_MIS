@@ -1,6 +1,6 @@
 @extends('MIS.layout.master')
 
-@section('title','home')
+@section('title','member')
 
     <!-- TopNav bar -->
     <!-- TopNav bar End-->

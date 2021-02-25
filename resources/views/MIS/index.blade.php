@@ -58,5 +58,10 @@
     <!-- main container End-->
     <!-- SideNav -->
     <!-- SideNav End-->
+    <script type="text/javascript">
+      $(function() {
+        sales_chart();
+  });
+  </script>
 @endsection
  

@@ -30,8 +30,8 @@
         <h2><button class="btn-large red  waves-effect waves-light"  style="font-size:32px;" onclick="btnc()">試算</button> <br><br>
         </h2>
         <h2 id='QRcode'>
-          <button id='QRcodebutton'style="font-size:32px;" onclick="QRcodeWindow()">會員專屬碼</button>
-          <button id='QRcodebutton'style="font-size:32px;" onclick="ToQRcodeScanner()">　集點　</button>
+          <button class='button_webcam' id='QRcodebutton'style="font-size:32px;" onclick="QRcodeWindow()">會員專屬碼</button>
+          <button class='button_webcam' id='QRcodebutton'style="font-size:32px;" onclick="ToQRcodeScanner()">　集點　</button>
         </h2>
         <div id="qrcode"></div>
     </div>

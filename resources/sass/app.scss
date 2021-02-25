@@ -1,9 +1,7 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 /* sticky footer */
@@ -30,6 +28,9 @@
   }
   #body_QRcodeScanner{
     background-image:url('../images/coffee_background4-4K.png');
+  }
+  #body_auth{
+    background-image:url('../images/coffee--vandor-background.jpg');
   }
   .topnav {
     position: relative;
@@ -470,6 +471,23 @@ padding: 10px;
 border-radius: 3px;
 margin-bottom: 5px;
 }
+.sidebar__link__User{
+display: flex;
+align-items: center;
+color: #f3f4f6;
+padding: 10px;
+border-radius: 3px;
+margin-bottom: 5px;
+}
+#sidenav > .sidebar__link__User > div > a {
+  display: inline;
+  text-decoration: none;
+  color: #f3f4f6;
+  font-weight: 700;
+}
+#sidenav>.sidebar__link__User > div > div > a:hover {
+  color:  #b89600;
+  }
 /* About Pagination Link*/
 /*
 *************************
@@ -490,7 +508,7 @@ margin-bottom: 5px;
 /*
 ******************************
 */
-button{
+.button_webcam{
     border: none;
     color: white;
     background-color: orangered;
@@ -602,3 +620,6 @@ video{
   }
 }
 /* toast.css_END */
+/* EditElement   */
+
+/* EditElement_END*/

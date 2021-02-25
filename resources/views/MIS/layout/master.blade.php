@@ -14,6 +14,7 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <!--<link href="{{ asset('css/style.css') }}" rel="stylesheet">
   <link href="{{ asset('css/Vendor.css') }}" rel="stylesheet">-->
+  <script src="{{ asset('js/app.js') }}"></script>
   <!--ReactJS-->
 </head>
 <body id='body_vendor'>
@@ -23,11 +24,12 @@
     @include('MIS.layout.sidenav')
   </div>
  <!-- UI scripts -->
- <script src="{{ asset('jquery/jquery-2.1.1.min.js') }}"></script>
+    <script src="{{ asset('jquery/jquery-2.1.1.min.js') }}"></script>
     <script src="{{ asset('jquery/materialize.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('jquery/adapter.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('iconJS/all.min.js') }}"></script>
-    <!-- tf -->
+    <!-- Vuejs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js" integrity="sha512-BKbSR+cfyxLdMAsE0naLReFSLg8/pjbgfxHh/k/kUC82Hy7r6HtR5hLhobaln2gcTvzkyyehrdREdjpsQwy2Jw==" crossorigin="anonymous"></script>
     <!-- utils -->
     <script src="{{ asset('jquery/Chart.bundle.min.js') }}"></script>
     <script src="{{ asset('jquery/sweetalert2.all.min.js') }}"></script>
@@ -35,10 +37,62 @@
     <script src="{{ asset('js/util.js') }}"></script>
     <!-- chart -->
     <script src="{{ asset('js/VendorReact.js') }}"></script>
-    <script type="text/javascript">
-      $(function() {
-        sales_chart();
-  });
+  <script type="module">
+    import Editelement from '{{asset('js/component/Editelement.vue')}}';
+    export default {
+    name : '#Edit',
+    data () {
+        return {
+            child : false
+        }
+    },
+    components : {
+        selectInput : selectInput
+    },
+    methods : {
+        openChild () {
+          console.log('openChild')
+            this.child = true;
+        },
+        closeChild (event) {
+            this.child = false;
+            this.text = event.data;
+        }
+    }
+};
+//     var EditElement=new Vue({
+//   el: '#EditElement',
+//   data() {
+//     return {
+//       isShow: false
+//     }
+//    },
+//   methods: {
+//     showMore:function(event){
+//       this.isShow = true
+//       console.log('showMore')
+//     },
+//     closeMore() {
+//       this.isShow = false
+//       console.log('closeMore')
+//     }
+//   }
+// })
+// var demo = new Vue({
+//   el: '#demo',
+//   data: {
+//     name: 'Vue.js'
+//   },
+//   // define methods under the `methods` object
+//   methods: {
+//     greet: function (event) {
+//       // `this` inside methods points to the Vue instance
+//       alert('Hello ' + this.name + '!')
+//       // `event` is the native DOM event
+//       console.log('showMore')
+//     }
+//   }
+// })
   </script>
 <!-- Style -->
 <style>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\admin;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -15,6 +15,8 @@ class AdminController extends Controller
     public function index()
     {
         //
+        $admins = User::paginate(10);
+        return view('MIS.admin',compact('admins'));
     }
 
     /**
@@ -75,11 +77,14 @@ class AdminController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\admin  $admin
+     * @param  \App\Models\User  $admin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(admin $admin)
+    public function destroy(User $admin)
     {
         //
+        $admin->delete();
+
+        return redirect()->to('/admin');
     }
 }

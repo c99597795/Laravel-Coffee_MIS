@@ -19,10 +19,11 @@ Route::get('/', function () {
 })->middleware('auth');
 Route::get('MIS',function(){
     return view('MIS.index');
-});
+})->name('MIS');
 Route::get('admin', function () {
     return view('MIS.admin');
 })->name('admin');
+
 /*Route::get('member', function () {
     return view('MIS.member');
 })->name('member');*/
@@ -30,11 +31,12 @@ Route::get('admin', function () {
 Route::get('member',[App\Http\Controllers\MemberController::class,'index'])->name('member');
 Route::get('point',[App\Http\Controllers\PointController::class,'index'])->name('point');
 Route::get('revenue',[App\Http\Controllers\RevenuesController::class,'index'])->name('revenue');
-Route::get('/coffee',function(){
+Route::get('admin',[App\Http\Controllers\AdminController::class,'index'])->name('admin');
+Route::get('coffee',function(){
     return view('coffee.index');
-}
-);
+})->name('coffee');
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('admin','App\Http\Controllers\AdminController');
+Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

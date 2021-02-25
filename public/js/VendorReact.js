@@ -1,4 +1,3 @@
-
 function sales_chart() {
     console.log('Chart_Success');
     var charts=document.getElementById('chart'),

@@ -1,5 +1,5 @@
 
-button{
+.button_webcam{
     border: none;
     color: white;
     background-color: orangered;
@@ -21,4 +21,19 @@ button:hover{
 video{
     width: 100%;
   height: auto;
+}
+.something{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: auto;
+    max-width: 977px;
+    border-radius: 3px;
+    background: rgb(47, 52, 55);
+    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.2) 0px 5px 10px, rgba(15, 15, 15, 0.4) 0px 15px 40px;
+    top: 72px;
+    left: 72px;
+    right: 72px;
+    margin-right: auto;
+    height: calc(100% - 144px);
 }
